@@ -1,0 +1,29 @@
+﻿@model East_Village.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card text-center col-md-8 offset-md-2 curved" style="margin-top:8px; background-color: rgba(255,255,255,0.6)">
+
+    <div class="card-header prodPad2" style="margin-top:15px;">
+        <input type="checkbox" id="zoomCheck">
+        <label for="zoomCheck">
+            <img src="~/Uploads/@Html.DisplayFor(model => model.ProductImage)"
+                 class="card-img-top"
+                 style="width:25.68rem; height:25.68rem;" />
+        </label>
+    </div>
+  
+        <h5>
+            @Html.DisplayFor(model => model.ProductTitle)
+        </h5>
+        <h5>
+            @Html.DisplayFor(model => model.ProductContent)
+        </h5>
+   
+
+    <a href="~/Home/Index" class="btn btn-outline-primary btn-lg curved">Back to List </a>
+    <br />
+</div>

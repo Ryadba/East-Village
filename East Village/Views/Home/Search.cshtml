@@ -1,0 +1,22 @@
+﻿@model IEnumerable<East_Village.Models.Product>
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="card text-center w-100 curved" style="margin-top:15px; padding:10px; background-color: rgba(255,255,255,0); min-height:550px;">
+        <h1 class="card-header" style="border: 2px solid #e9eeff; border-radius: 22px;">Search Result</h1>
+        <div class="card-body row">
+            @foreach (var subItem in Model)
+            {
+
+                <div class="col-md-4 img-thumbnail curved" style="padding:30px;">
+                    <img src="~/Uploads/@subItem.ProductImage" style="margin-bottom:30px; width:15.625rem; height:15.625rem;" />
+                    <h3>@Html.DisplayFor(modelItem => subItem.ProductTitle)</h3>
+                    <h5>@Html.DisplayFor(modelItem => subItem.ProductContent)</h5>
+                    @Html.ActionLink("Details", "Details", new { ProductId = subItem.Id }, new { @class = "btn btn-primary", @style = "border-radius: 22px;" })
+                </div>
+            }
+        </div>
+    </div>

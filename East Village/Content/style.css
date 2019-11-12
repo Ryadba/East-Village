@@ -1,0 +1,321 @@
+﻿/*Custom padding start*/
+@media screen and (min-width: 768px) {
+    .padd {
+        padding-top: 97px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .padd {
+        padding-top: 97px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .padd {
+        padding-top: 97px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .padd2 {
+        padding-bottom: 35px;
+        margin-right: 0px;
+        margin-left: 0px;
+        background-image: url('../Images/MinnCT2d.jpg');
+        background-position: center top;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .padd2 {
+        padding-bottom: 35px;
+        margin-right: 0px;
+        margin-left: 0px;
+        background-image: url('../Images/MinnCT2dm.jpg');
+        background-position: center top;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .padd3 {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .padd3 {
+        padding-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .padd3 {
+        padding-bottom: 35px;
+    }
+}
+
+@media screen and (min-width: 691px) {
+    .padd4 {
+        margin-top: 62px;
+    }
+}
+
+/*Custom padding end*/
+
+.curved {
+    border: 2px solid #e9eeff;
+    border-radius: 22px;
+}
+
+.navbar-default {
+    background-color: rgba(240,248,255,0.97);
+}
+
+.navbar-right {
+    float: right !important;
+    position: relative;
+}
+
+.navbar-left {
+    float: left !important;
+    position: relative;
+}
+
+.myfooter {
+    background-color: rgba(240,248,255,0.97);
+}
+
+.subfooter {
+    background-color: darkgrey;
+    color: white;
+    text-align: center;
+}
+
+.filterInvert {
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
+/*AlRiO Custom file Input Style Start*/
+input {
+    padding: 1px;
+}
+
+    input:focus + label {
+        box-shadow: 0px 0px 3px 3px #a2cfff;
+    }
+
+.custom-filename {
+    z-index: 2;
+    position: absolute;
+    padding-left: 12px;
+    top: 8px;
+}
+
+.custom-file-label {
+    position: absolute;
+    top: 0;
+    right: 14.5px;
+    left: 14.8px;
+    z-index: 1;
+    height: calc(2.24rem + 2px);
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+/*AlRiO Custom file Input Style End*/
+
+/*AlRiO Custom Search Input Style Start*/
+#searchName {
+    width: 128px;
+    border: 2px solid #ced4da;
+    border-radius: 22px;
+    background-color: white;
+    background-image: url('../Content/magnifying-glass-3x.png');
+    background-position: 5px 8px;
+    padding: 7px 34px;
+    margin: -1px 10px;
+    background-repeat: no-repeat;
+    transition: width 0.4s ease-in-out;
+}
+
+.searchM {
+    background-image: url('../Content/magnifying-glass-3x.png');
+    background-position: 4px 8px;
+    background-repeat: no-repeat;
+}
+
+#searchName:focus {
+    outline: none;
+    width: 280px;
+    box-shadow: 0px 0px 3px 1px #a2cfff;
+}
+/*AlRiO Custom Search Input Style End*/
+.img-size {
+    font-size: 38px;
+}
+
+.navbar-user {
+    padding: 10px;
+}
+
+.wide {
+    width: 566px;
+}
+
+.mapid {
+    height: 180px;
+}
+
+.fa {
+    padding: 7px 0px 0px 10px;
+    font-size: 37px;
+    width: 44px;
+    height: 41px;
+    margin: 4px;
+    border-radius: 20%;
+}
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+/*Al-RiO custom faded video background start*/
+#video {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    overflow: hidden;
+    opacity: 0.4;
+}
+/*Al-RiO custom faded video background end*/
+
+/*custom zoom on click start*/
+
+input[type=checkbox] {
+    display: none;
+}
+
+.prodPad2 img {
+    border-bottom-left-radius: calc(.25rem - 1px);
+    border-bottom-right-radius: calc(.25rem - 1px);
+    cursor: zoom-in;
+}
+
+input[type=checkbox]:checked ~ label > img {
+    transform: scale(2);
+    margin-top: 186px;
+    margin-bottom: 131px;
+    transition: margin-bottom 0.4s ease-in-out, margin-top 0.4s ease-in-out, transform 0.5s ease-in-out;
+    cursor: zoom-out;
+}
+
+/*custom zoom on click end*/
+
+.navhov:hover {
+    background-color: #CEC8F3;
+    border-radius: 22px;
+    transition: background-color .5s ease-in-out, border-radius .2s ease-in-out;
+}
+
+/*custom scroll start */
+#js-top {
+    text-align: center;
+    margin: 28px;
+    display: inline-block;
+    text-decoration: none;
+    right: 28px;
+    background-color: #CEC8F3;
+    height: 48px;
+    width: 48px;
+    position: fixed;
+    border-radius: 22px;
+    bottom: 28px;
+    visibility: hidden;
+    z-index: 1030;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+}
+
+    #js-top::after {
+        content: "\f077";
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 2em;
+        line-height: 45px;
+        color: black;
+    }
+
+    #js-top:hover {
+        cursor: pointer;
+        background-color: rgba(240,248,255,0.97);
+    }
+
+    #js-top:active {
+        background-color: #CEC8F3;
+    }
+
+    #js-top.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+@media (max-width: 576px) {
+    #js-top {
+        margin-right: 17px;
+        margin-bottom: 49px;
+    }
+}
+@media (min-width: 576px) and (max-width:821px) {
+
+    #js-top {
+        margin-right: 17px;
+        margin-bottom: 5px;
+    }
+}
+
+
+@media (min-width: 821px) and (max-width: 879px) {
+
+    #js-top {
+        margin-right: 17px;
+        margin-bottom: 159px;
+    }
+}
+
+@media (min-width: 879px) and (max-width: 975px) {
+
+    #js-top {
+        margin-right: 17px;
+        margin-bottom: 260px;
+    }
+}
+@media (min-width: 957px) and (max-width: 1053px) {
+
+    #js-top {
+        margin-right: 17px;
+        margin-bottom: 249px;
+    }
+}
+@media (min-width: 1053px) and (max-width: 1500px) {
+
+    #js-top {
+        margin-right: 17px;
+        margin-bottom: 189px;
+    }
+}
+/*custom scroll end */

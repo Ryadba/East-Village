@@ -1,0 +1,39 @@
+﻿@model East_Village.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-6 offset-md-3 curved" style="padding-top: 8px; margin-top: 8px;">
+
+    <h2 class="card-header text-center" style="border: 2px solid #e9eeff; border-radius: 22px;">Category Details</h2>
+
+    <hr />
+    <div>
+        <h5>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </h5>
+        <br />
+        <h3>
+            @Html.DisplayFor(model => model.CategoryName)
+        </h3>
+        <br />
+        <h5>
+            @Html.DisplayNameFor(model => model.CategoryDescription)
+        </h5>
+        <br />
+        <h3>
+            @Html.DisplayFor(model => model.CategoryDescription)
+        </h3>
+    </div>
+    <hr />
+
+    @if (User.IsInRole("Admins"))
+    {
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-info btn-block btn-lg curved" })
+    }
+    <br />
+    <a href="~/Categories" class="btn btn-light btn-block btn-lg curved">Back to List</a>
+    <br />
+</div>

@@ -1,0 +1,51 @@
+﻿@using Microsoft.AspNet.Identity
+@using WebApplication2.Models;
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoff" }))
+    {
+        var db = new ApplicationDbContext();
+        var UserID = User.Identity.GetUserId();
+        var CurrentUser = db.Users.Where(a => a.Id == UserID).SingleOrDefault();
+
+        @Html.AntiForgeryToken()
+<ul class="nav navbar-nav navbar-light ml-auto navbar-right">
+
+    <li class="dropdown">
+        <button class="btn btn-outline-secondary dropdown-toggle curved" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="oi oi-person"></span>
+            <strong>Welcome : @CurrentUser.UserName</strong>
+        </button>
+        <div class="dropdown-menu navbar-user dropdown-menu-right" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item oi oi-person img-size btn-block" type="button"><strong>&nbsp;@CurrentUser.UserName</strong></button>
+            <a href="~/Account/EditProfile" class="btn btn-info btn-block curved">Account Settings</a>
+            @if (User.IsInRole("Admins"))
+    {
+        <a href="~/Categories" class="btn btn-info btn-block curved">Manage Categories</a>
+        <a href="~/Roles" class="btn btn-info btn-block curved">Manage Roles</a>
+}
+            <div class="dropdown-divider"></div>
+            <a class="btn btn-danger btn-block curved" href="javascript:document.getElementById('logoff').submit()">&nbsp Log Off</a>
+        </div>
+    </li>
+</ul>
+    }
+}
+else
+{
+        <ul class="nav navbar-nav navbar-light ml-auto navbar-right">
+            <li class="nav-item navhov">
+                <a class="nav-link" style="color:black" href="~/Account/Register">
+                    <i class="oi oi-person"></i>
+                    Sign Up
+                </a>
+            </li>
+            <li class="nav-item navhov">
+                <a class="nav-link" style="color:black" href="~/Account/Login">
+                    <i class="oi oi-account-login"></i>
+                    Log In
+                </a>
+            </li>
+        </ul>
+}

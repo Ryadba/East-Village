@@ -1,0 +1,31 @@
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+
+
+<div class="col-md-6 offset-md-3 curved" style="padding-top: 8px; margin-top: 8px;">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <h2 class="card-header text-center curved" >Edit Role</h2>
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group text-center">
+           
+                <input type="submit" value="Save" class="btn btn-secondary btn-lg" />
+                &nbsp;
+                <a href="~/Roles" class="btn btn-light btn-lg">Back to List</a>
+            </div>
+  
+    }
+</div>

@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/open-iconic-bootstrap.css" rel="stylesheet" />
+    <link href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/font.css" rel="stylesheet" />
+    <link href="~/Content/favicon.ico" rel="icon" />
+    <link href="~/Content/font/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-default navbar-light navbar-expand-md fixed-top">
+        
+        <div class="container-fluid">
+            <a href="~/Home" class="navbar-brand mx-auto navhov">
+                <img src="~/Content/EVM_Logo.png" alt="East Village Market" width="70" style="border-radius: 20%;" />
+            </a>
+            <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse"
+                    data-target="#navbarToggler1" aria-controls="navbarToggler1" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navbarToggler1" class="collapse navbar-collapse">
+
+
+                <ul class="nav navbar-nav mr-auto nav-justified w-100 navbar-left">
+                    <li class="nav-item">
+                        <a class="nav-link navhov" style="color:black" href="~/Home">
+                            <i class="oi oi-home"></i>
+                            Home &nbsp;
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navhov" style="color:black" href="~/Products">
+                            <i class="oi oi-heart"></i>
+                            Pruducts &nbsp;
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navhov" style="color:black" href="~/Home/About">
+                            <i class="oi oi-globe"></i>
+                            About Us &nbsp;
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navhov" style="color:black" href="~/Home/Contact">
+                            <i class="oi oi-envelope-closed"></i>
+                            Contact Us
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="nav-item">
+                    @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+                    {
+                        <input type="text" aria-label="Search" name="searchName" id="searchName" placeholder="Search..." />
+                        <button class="btn btn-outline-info" type="submit" value="Search" style="margin-left: 38px;border-radius: 22px;margin-bottom: 0.28rem!important;">Search</button>
+                    }
+                </div>
+                <!--Partial Login -->
+                @Html.Partial("_Login")
+            </div>
+        </div>
+    </nav>
+
+    <div class="padd">
+        <div class="row padd2">
+            @RenderBody()
+        </div>
+    </div>
+
+
+    <!--Footer-->
+
+    <footer class="myfooter">
+        <div class="container-fluid padd3">
+            <div class="row text-center" style="padding-top: 15px;">
+                <div class="col-6 col-sm-4">
+                    <h3>
+                        <i class="oi oi-globe"></i>
+                        About Us
+                    </h3>
+                    <p>
+                        At East Village Market we thrive on customer satisfaction. We serve with kind customer service. Come to purchase snacks, tobacco, electronics, some over the counter drugs and much more.
+                        We are conveniently located near Downtown Minneapolis and walking distance from the U.S. Bank stadium.
+                    </p>
+                </div>
+                <div class="col-6 col-sm-4">
+                    <h3>
+                        <i class="oi oi-tags"></i>
+                        Links
+                    </h3>
+                    <a class="btn btn-outline-info btn-block curved" href="~/Products">Collection</a>
+                </div>
+                <div class="col-6 col-sm-4">
+                    <h3>
+                        <i class="oi oi-envelope-closed"></i>
+                        Contact Us
+                    </h3>
+                    <a class="btn btn-info btn-block curved" href="~/Home/Contact">Leave a Message</a>
+                    <a href="https://www.facebook.com/EastVillageMarketMpls" title="Facebook" aria-label="Facebook" target="_blank"><i class="btn fa fa-facebook"></i></a>
+                    <p>
+                        1431 11th Ave S, Minneapolis, MN 55404
+                        <br /> Phone   : (612) 259-8128
+                        <br /> Support : EastVillageMarketMpls@gmail.com
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="subfooter fixed-bottom">
+            <span> Copyright © 2019 East Village Market. Designed by </span><a href="https://www.linkedin.com/in/AL-RiO/">
+                <img src="~/Images/Ryad_Abdelgalil.gif" alt="Ryad Abdelgalil" style="width:50px;" area-lable="Ryad Abdelgalil" class="navhov" />
+            </a><span> All Rights Reserved</span>
+        </div>
+    </footer>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/jquery-slim.min.js"></script>
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
