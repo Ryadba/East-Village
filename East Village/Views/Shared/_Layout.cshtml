@@ -15,12 +15,11 @@
 <body>
     <!--Navbar-->
     <nav class="navbar navbar-default navbar-light navbar-expand-md fixed-top">
-        
+        <a href="~/Home" class="navbar-brand mx-auto logoC navhov">
+            <img src="~/Content/EVM_Logo.png" alt="East Village Market" width="70" style="border-radius: 20%;" />
+        </a>
         <div class="container-fluid">
-            <a href="~/Home" class="navbar-brand mx-auto navhov">
-                <img src="~/Content/EVM_Logo.png" alt="East Village Market" width="70" style="border-radius: 20%;" />
-            </a>
-            <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse"
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarToggler1" aria-controls="navbarToggler1" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -57,10 +56,10 @@
                 </ul>
                 <div class="nav-item">
                     @using (Html.BeginForm("Search", "Home", FormMethod.Post))
-                    {
-                        <input type="text" aria-label="Search" name="searchName" id="searchName" placeholder="Search..." />
-                        <button class="btn btn-outline-info" type="submit" value="Search" style="margin-left: 38px;border-radius: 22px;margin-bottom: 0.28rem!important;">Search</button>
-                    }
+                {
+                    <input type="text" aria-label="Search" name="searchName" id="searchName" placeholder="Search..." />
+                    <button class="btn searchMeg searchM" type="submit" value="Search"></button>
+            }
                 </div>
                 <!--Partial Login -->
                 @Html.Partial("_Login")
@@ -86,7 +85,9 @@
                         About Us
                     </h3>
                     <p>
-                        At East Village Market we thrive on customer satisfaction. We serve with kind customer service. Come to purchase snacks, tobacco, electronics, some over the counter drugs and much more.
+                        At East Village Market we thrive on customer satisfaction. We serve with kind customer service. 
+                        Come to purchase snacks, tobacco, electronics,
+                        some over-the-counter medicine and much more.
                         We are conveniently located near Downtown Minneapolis and walking distance from the U.S. Bank stadium.
                     </p>
                 </div>

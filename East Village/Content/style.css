@@ -136,17 +136,66 @@ input {
     border-radius: 22px;
     background-color: white;
     background-image: url('../Content/magnifying-glass-3x.png');
-    background-position: 5px 8px;
-    padding: 7px 34px;
-    margin: -1px 10px;
+    background-position: 4px 8px;
+    padding: 9px 10px 9px 37px;
+    margin: 10px 68px -11px 10px;
     background-repeat: no-repeat;
     transition: width 0.4s ease-in-out;
 }
 
-.searchM {
-    background-image: url('../Content/magnifying-glass-3x.png');
-    background-position: 4px 8px;
-    background-repeat: no-repeat;
+@media screen and (max-width: 768px) {
+    .searchM {
+        display: none;
+    }
+
+    .nav-item {
+        text-align: center !important
+    }
+
+    #searchName {
+        margin: 0px;
+    }
+
+    .logoC {
+        margin-top: -10px;
+        margin-bottom: -49px;
+        position: relative;
+    }
+
+    .navbar-toggler {
+        margin-top: -12px;
+        margin-bottom: 12px;
+    }
+
+    .userPanel {
+        margin-top: -336px;
+    }
+
+    .userPanelSignedIn {
+        margin-top: -330px;
+    }
+
+    .nav-item {
+        padding-top: 15px;
+    }
+
+    .linkPad {
+        padding: 0px 35px 0px;
+    }
+   }
+
+@media screen and (min-width: 768px) {
+    .searchMeg {
+        border-radius: 16px;
+        padding-bottom: 23px !important;
+        padding-right: 18px !important;
+        margin-top: -50px;
+        margin-left: 14px;
+        background-color: white;
+        background-image: url(../Content/magnifying-glass-3x.png);
+        background-position: 2px 2px;
+        background-repeat: no-repeat;
+    }
 }
 
 #searchName:focus {
@@ -280,6 +329,7 @@ input[type=checkbox]:checked ~ label > img {
         margin-bottom: 49px;
     }
 }
+
 @media (min-width: 576px) and (max-width:821px) {
 
     #js-top {
@@ -304,6 +354,7 @@ input[type=checkbox]:checked ~ label > img {
         margin-bottom: 260px;
     }
 }
+
 @media (min-width: 957px) and (max-width: 1053px) {
 
     #js-top {
@@ -311,6 +362,7 @@ input[type=checkbox]:checked ~ label > img {
         margin-bottom: 249px;
     }
 }
+
 @media (min-width: 1053px) and (max-width: 1500px) {
 
     #js-top {

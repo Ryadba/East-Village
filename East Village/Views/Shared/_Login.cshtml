@@ -10,12 +10,12 @@
         var CurrentUser = db.Users.Where(a => a.Id == UserID).SingleOrDefault();
 
         @Html.AntiForgeryToken()
-<ul class="nav navbar-nav navbar-light ml-auto navbar-right">
+<ul class="nav navbar-nav navbar-light ml-auto navbar-right userPanelSignedIn">
 
     <li class="dropdown">
         <button class="btn btn-outline-secondary dropdown-toggle curved" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="oi oi-person"></span>
-            <strong>Welcome : @CurrentUser.UserName</strong>
+            <strong>Welcome<br /> &nbsp @CurrentUser.UserName</strong>
         </button>
         <div class="dropdown-menu navbar-user dropdown-menu-right" aria-labelledby="dropdownMenu2">
             <button class="dropdown-item oi oi-person img-size btn-block" type="button"><strong>&nbsp;@CurrentUser.UserName</strong></button>
@@ -34,14 +34,14 @@
 }
 else
 {
-        <ul class="nav navbar-nav navbar-light ml-auto navbar-right">
-            <li class="nav-item navhov">
+        <ul class="nav navbar-nav navbar-light ml-auto navbar-right userPanel">
+            <li class="nav-item navhov linkPad">
                 <a class="nav-link" style="color:black" href="~/Account/Register">
                     <i class="oi oi-person"></i>
                     Sign Up
                 </a>
             </li>
-            <li class="nav-item navhov">
+            <li class="nav-item navhov linkPad">
                 <a class="nav-link" style="color:black" href="~/Account/Login">
                     <i class="oi oi-account-login"></i>
                     Log In
