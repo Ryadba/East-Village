@@ -8,12 +8,31 @@
     <link href="~/Content/open-iconic-bootstrap.css" rel="stylesheet" />
     <link href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
     <link href="~/Content/font.css" rel="stylesheet" />
-    <link href="~/Content/favicon.ico" rel="icon" />
     <link href="~/Content/font/font-awesome.css" rel="stylesheet" />
     <link href="~/Content/style.css" rel="stylesheet" />
-</head>
-<body>
-    <!--Navbar-->
+
+    <!--favicon-->
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="~/Content/EVM/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="~/Content/EVM/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="~/Content/EVM/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="~/Content/EVM/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="~/Content/EVM/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="~/Content/EVM/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="~/Content/EVM/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="~/Content/EVM/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="~/Content/EVM/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="~/Content/EVM/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="~/Content/EVM/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="~/Content/EVM/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="~/Content/EVM/favicon-16x16.png">
+        <link rel="manifest" href="~/Content/EVM/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="~/Content/EVM/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <!--Navbar-->
     <nav class="navbar navbar-default navbar-light navbar-expand-md fixed-top">
         <a href="~/Home" class="navbar-brand mx-auto logoC navhov">
             <img src="~/Content/EVM_Logo.png" alt="East Village Market" width="70" style="border-radius: 20%;" />
@@ -56,10 +75,10 @@
                 </ul>
                 <div class="nav-item">
                     @using (Html.BeginForm("Search", "Home", FormMethod.Post))
-                {
-                    <input type="text" aria-label="Search" name="searchName" id="searchName" placeholder="Search..." />
-                    <button class="btn searchMeg searchM" type="submit" value="Search"></button>
-            }
+                    {
+                        <input type="text" aria-label="Search" name="searchName" id="searchName" placeholder="Search..." />
+                        <button class="btn searchMeg searchM" type="submit" value="Search"></button>
+                    }
                 </div>
                 <!--Partial Login -->
                 @Html.Partial("_Login")
@@ -85,7 +104,7 @@
                         About Us
                     </h3>
                     <p>
-                        At East Village Market we thrive on customer satisfaction. We serve with kind customer service. 
+                        At East Village Market we thrive on customer satisfaction. We serve with kind customer service.
                         Come to purchase snacks, tobacco, electronics,
                         some over-the-counter medicine and much more.
                         We are conveniently located near Downtown Minneapolis and walking distance from the U.S. Bank stadium.
@@ -129,5 +148,5 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
 
     @RenderSection("scripts", required: false)
-</body>
+    </body>
 </html>

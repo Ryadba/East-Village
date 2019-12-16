@@ -5,11 +5,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>&nbsp; Products</h2>
-
 <a class="ScrollBtn hide" aria-label="Back to top" href="" id="js-top"></a>
 
-<div class="col-md-12">
+<div class="col-md-12" style="padding-top: 15px;">
 
     @if (User.IsInRole("Admins"))
     {
@@ -83,7 +81,7 @@
                 window.scrollTo(0, c - c / 10);
             }
         };
-        
+
         scrollToTopButton.onclick = function (e) {
             e.preventDefault();
             scrollToTop();

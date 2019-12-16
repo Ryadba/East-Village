@@ -139,6 +139,32 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\EVM\android-icon-144x144.png" />
+    <Content Include="Content\EVM\android-icon-192x192.png" />
+    <Content Include="Content\EVM\android-icon-36x36.png" />
+    <Content Include="Content\EVM\android-icon-48x48.png" />
+    <Content Include="Content\EVM\android-icon-72x72.png" />
+    <Content Include="Content\EVM\android-icon-96x96.png" />
+    <Content Include="Content\EVM\apple-icon-114x114.png" />
+    <Content Include="Content\EVM\apple-icon-120x120.png" />
+    <Content Include="Content\EVM\apple-icon-144x144.png" />
+    <Content Include="Content\EVM\apple-icon-152x152.png" />
+    <Content Include="Content\EVM\apple-icon-180x180.png" />
+    <Content Include="Content\EVM\apple-icon-57x57.png" />
+    <Content Include="Content\EVM\apple-icon-60x60.png" />
+    <Content Include="Content\EVM\apple-icon-72x72.png" />
+    <Content Include="Content\EVM\apple-icon-76x76.png" />
+    <Content Include="Content\EVM\apple-icon-precomposed.png" />
+    <Content Include="Content\EVM\apple-icon.png" />
+    <Content Include="Content\EVM\browserconfig.xml" />
+    <Content Include="Content\EVM\favicon-16x16.png" />
+    <Content Include="Content\EVM\favicon-32x32.png" />
+    <Content Include="Content\EVM\favicon-96x96.png" />
+    <Content Include="Content\EVM\favicon.ico" />
+    <Content Include="Content\EVM\ms-icon-144x144.png" />
+    <Content Include="Content\EVM\ms-icon-150x150.png" />
+    <Content Include="Content\EVM\ms-icon-310x310.png" />
+    <Content Include="Content\EVM\ms-icon-70x70.png" />
     <Content Include="Content\EVM_Logo.png" />
     <Content Include="Content\favicon.ico" />
     <Content Include="Content\jssor\jssor.slider-27.4.0.min.js" />
@@ -165,7 +191,6 @@
     <Content Include="Content\leaflet\images\marker-icon.png" />
     <Content Include="Content\leaflet\images\marker-shadow.png" />
     <Content Include="Content\leaflet\leaflet.css" />
-    <Content Include="Content\logo1.png" />
     <Content Include="Content\logo88.png" />
     <Content Include="Content\magnifying-glass-3x.png" />
     <Content Include="Content\Raindrops_Vid.mp4" />
@@ -183,6 +208,7 @@
     <Content Include="Images\Ryad_Abdelgalil.gif" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Content\EVM\manifest.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
