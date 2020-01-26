@@ -25,9 +25,9 @@ namespace WebApplication2
                 role.Name = "Admins";
                 roleManager.Create(role);
                 ApplicationUser user = new ApplicationUser();
-                user.UserName = "Rio";
-                user.Email = "lil-rio@hotmail.com";
-                var Check = userManager.Create(user, "Abc_123@");
+                user.UserName = "Kareem";
+                user.Email = "eastvillagemarketmpls@outlook.com";
+                var Check = userManager.Create(user, "Kareem_abc@");
                 if (Check.Succeeded)
                 {
                     userManager.AddToRole(user.Id, "Admins");
