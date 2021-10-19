@@ -95,7 +95,7 @@
             </div>
         </div>
         <div class="container-fluid navhov">
-            <div id="mapid" style="width: 100%; height: 500px;"></div>
+            <div id="map" style="width: 100%; height: 500px;"></div>
         </div>
     </div>
 </div>
@@ -105,15 +105,20 @@
 
     <script>
         //Initiate map
-        var mymap = L.map('mapid', {
+        var mymap = L.map('map', {
             scrollWheelZoom: false
-        }).setView([44.970, -93.260], 15.55);
+        }).addLayer(mapboxTiles)
+            .setView([44.970, -93.260], 15.55);
 
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        L.mapbox.accessToken = 'pk.eyJ1IjoiZWFzdHZpbGxhZ2VtYXJrZXQiLCJhIjoiY2pwbjNxcmN4MHZoajQzb2JlbmhnZmQyZSJ9.wQ4l-xDB5W2s0qKR-1axMw';
+        var mapboxTiles = L.tileLayer(
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}.png?access_token={accessToken}'+ L.mapbox.accessToken, {
+            attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
+            tileSize: 512,
             maxZoom: 18,
-            id: 'mapbox.streets',
-            accessToken: 'pk.eyJ1IjoiZWFzdHZpbGxhZ2VtYXJrZXQiLCJhIjoiY2pwbjNxcmN4MHZoajQzb2JlbmhnZmQyZSJ9.wQ4l-xDB5W2s0qKR-1axMw'
+            zoomOffset: -1,
+            id: 'mapbox/streets-v11',
+          
         }).addTo(mymap);
 
         //Address popup

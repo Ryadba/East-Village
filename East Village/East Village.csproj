@@ -181,13 +181,13 @@
     <Content Include="Content\leaflet\leaflet.css" />
     <Content Include="Content\logo88.png" />
     <Content Include="Content\magnifying-glass-3x.png" />
-    <Content Include="Content\Raindrops_Vid.mp4" />
     <Content Include="Content\font.css" />
     <Content Include="Content\font\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
     <Content Include="Content\font\index.html" />
     <Content Include="Content\open-iconic-bootstrap.css" />
+    <Content Include="Content\Raindrops_Vid2.mp4" />
     <Content Include="Content\style.css" />
     <Content Include="fonts\open-iconic.svg" />
     <Content Include="Global.asax" />
